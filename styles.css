@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+
+.wrapper {
+    display: grid;
+    background-color: gray;
+    margin-left: 25%;
+    margin-top: 2%;
+    width: 900px;
+    height: 900px;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px 300px 20px 1fr 50px;
+}
+
+.screen {
+    display: grid;
+    background-color: white;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.button-container {
+    display: grid;
+    background-color: rgb(68, 67, 67);
+    border: 1px solid black;
+    grid-column: 2/3;
+    grid-row: 4/5;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "seven eight nine divide clear";
+    grid-gap: 10px;
+}
+
+.buttons {
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+    font-size: 50px;
+}
+
+.clear {
+    grid-column: 5/7;
+}
+
+.equals {
+    grid-column: 5/7;
+}
+
+.seven {
+    grid-area: seven;
+}
