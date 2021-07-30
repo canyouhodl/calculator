@@ -4,41 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="screen"></div>
-        <div class="button-container">
-            <div class="buttons seven">7</div>
-            <div class="buttons eight">8</div>
-            <div class="buttons nine">9</div>
-            <div class="buttons divide">/</div>
-            <div class="buttons clear">CLEAR</div>
 
-            <div class="buttons four">4</div>
-            <div class="buttons five">5</div>
-            <div class="buttons six">6</div>
-            <div class="buttons multiply">X</div>
-            <div class="buttons pthis-left">(</div>
-            <div class="buttons pthis-right">)</div>
 
-            <div class="buttons one">1</div>
-            <div class="buttons two">2</div>
-            <div class="buttons three">3</div>
-            <div class="buttons four">4</div>
-            <div class="buttons exponent">X^2</div>
-            <div class="buttons root">root</div>
+        <input type="text" class="screen" value="" disabled/>
+        <div class="buttons-container">
+            <button class="buttons seven" value="7">7</button>
+            <button class="buttons eight" value="8">8</button>
+            <button class="buttons nine" value="9">9</button>
+            <button class="buttons divide operator" value="/">&#247;</button>
+            <button class="buttons clear" value="clear">CLEAR</button>
 
-            <div class="buttons zero">0</div>
-            <div class="buttons dot">.</div>
-            <div class="buttons percent">%</div>
-            <div class="buttons plus">+</div>
-            <div class="buttons equals">=</div>
+            <button class="buttons four" value="4">4</button>
+            <button class="buttons five" value="5">5</button>
+            <button class="buttons six" value="6">6</button>
+            <button class="buttons multiply operator" value="*">&#215;</button>
+            <button class="buttons p pthis-left " value="(">(</button>
+            <button class="buttons p pthis-right " value=")">)</button>
+
+            <button class="buttons one" value="1">1</button>
+            <button class="buttons two" value="2">2</button>
+            <button class="buttons three" value="3">3</button>
+            <button class="buttons minus operator" value="-" >&#8722;</button>
+            <button class="buttons exponent operator" value="**">X<sup>2</sup></button>
+            <button class="buttons root operator" value="root">&#8730;</button>
+
+            <button class="buttons zero" value="0">0</button>
+            <button class="buttons dot" value=".">.</button>
+            <button class="buttons percent" value="%">%</button>
+            <button class="buttons plus operator" value="+">&#43;</button>
+            <button class="buttons equals operator" value="=">=</button>
         </div>
 
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
