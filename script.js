@@ -21,6 +21,12 @@ function inputDigit(digit) {
 }
 
 function inputDecimal(dot) {
+    if (calculator.waitingForSecondOperand === true) {
+        calculator.displayValue = '0.';
+        calculator.waitingForSecondOperand = false;
+        return;
+    }
+
     if(!calculator.displayValue.includes(dot)) {
         calculator.displayValue += dot;
     }
@@ -31,6 +37,12 @@ function handleOperator(nextOperator) {
     const { firstOperand, displayValue, operator } = calculator;
     //'parseFloat' converst eh string contents of 'displayValue' to a floating-point number
     const inputValue = parseFloat(displayValue);
+
+    if (operator && calculator.waitingForSecondOperand) {
+        calculator.operator = nextOperator;
+        console.log(calculator);
+        return;
+    }
 
     if (firstOperand === null && !isNaN(inputValue)) {
         calculator.firstOperand = inputValue;
@@ -62,6 +74,14 @@ function calculate(firstOperand, secondOperand, operator) {
     }
 
     return secondOperand;
+}
+
+function resetCalculator() {
+    calculator.displayValue = '0';
+    calculator.firstOperand = null;
+    calculator.waitingForSecondOperand = false;
+    calculator.operator = null;
+    console.log(calculator);
 }
 
 function updateDisplay() {
@@ -99,7 +119,8 @@ keys.addEventListener('click', (e) => {
           return;
       }
       if(target.classList.contains('clear')) {
-          console.log('clear', target.value);
+          resetCalculator();
+          updateDisplay();
           return;
       }
 

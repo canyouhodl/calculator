@@ -1,61 +1,59 @@
 body {
-    background-color: black;
+  background-color: black;
 }
 
 .wrapper {
-    display: grid;
-    background-color: gray;
-    margin-left: 25%;
-    margin-top: 2%;
-    width: 900px;
-    height: 900px;
-    grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 50px 300px 20px 1fr 50px;
-    max-width: 100%;
-    overflow: hidden;
+  display: grid;
+  background-color: gray;
+  margin-left: 25%;
+  margin-top: 2%;
+  width: 900px;
+  height: 900px;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 50px 300px 20px 1fr 50px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .screen {
-    text-align: right;
-    font-size: 10em;
-    color: black;
-    background-color: white;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    max-width: 100%;
-    overflow: hidden;
+  text-align: right;
+  font-size: 10em;
+  color: black;
+  background-color: white;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .buttons-container {
-    display: grid;
-    background-color: rgb(68, 67, 67);
-    border: 1px solid black;
-    grid-column: 2/3;
-    grid-row: 4/5;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "seven eight nine divide clear";
-    grid-gap: 10px;
+  display: grid;
+  background-color: rgb(68, 67, 67);
+  border: 1px solid black;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "seven eight nine divide clear";
+  grid-gap: 10px;
 }
 
-
 .buttons {
-    justify-self: stretch;
-    align-self: stretch;
-    padding: 5px 5px 5px 5px;
-    background-color: white;
-    font-size: 50px;
+  justify-self: stretch;
+  align-self: stretch;
+  padding: 5px 5px 5px 5px;
+  background-color: white;
+  font-size: 50px;
 }
 
 button:hover {
-    background-color: #eaeaea;
-  }
+  background-color: #eaeaea;
+}
 
 .clear {
-    grid-column: 5/7;
+  grid-column: 5/7;
 }
 
 .equals {
-    grid-column: 5/7;
+  grid-column: 5/7;
 }
-
